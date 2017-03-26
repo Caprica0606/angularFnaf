@@ -1,0 +1,409 @@
+[
+  {
+    "label": "Who is Springtrap?",
+    "difficulty": 1,
+    "correctAnswer": 2,
+    "answers": [
+      { "label": "Circus Baby's best friend", "value": 1 },
+      { "label": "He houses the Purple Guy's soul", "value": 2 },
+      { "label": "He traps the Night Guard in FNAF 2", "value": 3 },
+      { "label": "A critical component to Ennard's escape plan", "value": 4 }
+    ]
+  },
+  {
+    "label": "Who plays guitar?",
+    "difficulty": 1,
+    "correctAnswer": 4,
+    "answers": [
+      { "label": "Freddy", "value": 1 },
+      { "label": "Chica", "value": 2 },
+      { "label": "Foxy", "value": 3 },
+      { "label": "Bonnie", "value": 4 }
+    ]
+  },
+  {
+    "label": "Where did Springtrap first appear?",
+    "correctAnswer": 3,
+    "difficulty": 2,
+    "answers": [
+      { "label": "FNAF 1", "value": 1 },
+      { "label": "FNAF 2", "value": 2 },
+      { "label": "FNAF 3", "value": 3 },
+      { "label": "FNAF 4", "value": 4 }
+    ]
+  },
+  {
+    "label": "Who throws a cupcakes in FNAF World?",
+    "difficulty": 1,
+    "correctAnswer": 1,
+    "answers": [
+      { "label": "Chica", "value": 1 },
+      { "label": "Toy Bonnie", "value": 2 },
+      { "label": "Mangle", "value": 3 },
+      { "label": "Balloon Girl", "value": 4 }
+    ]
+  },
+{
+    "label": "Who is Ennard?",
+    "difficulty": 2,
+    "correctAnswer": 1 ,
+    "answers": [
+      { "label": "An endoskeleton with a head", "value": 1 },
+      { "label": "The Night Guard’s enemy in FNAF 3l", "value": 2 },
+      { "label": "He traps the Night Guard in FNAF 2", "value": 3 },
+      { "label": "Toy Chica’s partner in crime", "value": 4 }
+    ]
+  },
+ {
+    "label": "Where did Chipper first appear?",
+    "difficulty": 3,
+    "correctAnswer": 3 ,
+    "answers": [
+      { "label": "FNAF World", "value": 1 },
+      { "label": "Chipper’s Revenge", "value": 2 },
+      { "label": "Chipper & Sons Lumber Co", "value": 3 },
+      { "label": "Woodland Aventures", "value": 4 }
+    ]
+  },
+ {
+    "label": "Where did the missing children incident occur?",
+    "difficulty": 2,
+    "correctAnswer": 2 ,
+    "answers": [
+      { "label": "Fredbear’s Family Diner", "value": 1 },
+      { "label": "Freddy Fazbear's Pizza ", "value": 2 },
+      { "label": "Fazbear's Fright", "value": 3 },
+      { "label": "Sister Location", "value": 4 }
+    ]
+  },
+  {
+     "label": "Who is the only character to have 2 jumps scares throughout FNAF 1 & FNAF 2?",
+     "difficulty": 3,
+     "correctAnswer":1 ,
+     "answers": [
+       { "label": "Freddy", "value": 1 },
+       { "label": "Bonnie", "value": 2 },
+       { "label": "Chica", "value": 3 },
+       { "label": "Freddy", "value": 4 }
+     ]
+   },
+  {
+     "label": "Who is the Purple Guy?",
+     "difficulty": 1,
+     "correctAnswer": 4 ,
+     "answers": [
+       { "label": "He jump scares Freddy", "value": 1 },
+       { "label": "He helps the animatronics", "value": 2 },
+       { "label": "He set the fire that fried Chica", "value": 3 },
+       { "label": "He kills children", "value": 4 }
+     ]
+   },
+  {
+     "label": "Which is true about Bonnie?",
+     "difficulty": 2,
+     "correctAnswer": 3 ,
+     "answers": [
+       { "label": "He first appeared in FNAF3", "value": 1 },
+       { "label": "He houses the Purple Guy's soul", "value": 2 },
+       { "label": "He plays Bash Jam", "value": 3 },
+       { "label": "Mic Toss is his preferred attach", "value": 4 }
+     ]
+   },
+  {
+     "label": "When was Ballora introduced?",
+     "difficulty": 1,
+     "correctAnswer": 4 ,
+     "answers": [
+       { "label": "FNAF 2", "value": 1 },
+       { "label": "FNAF 3", "value": 2 },
+       { "label": "FNAF World", "value": 3 },
+       { "label": "Sister Location", "value": 4 }
+     ]
+   },
+ {
+    "label": "In Sister Location, where do you hide from BidyBads?",
+    "difficulty": 2,
+    "correctAnswer": 2 ,
+    "answers": [
+      { "label": "In the closet", "value": 1 },
+      { "label": "Under the desk", "value": 2 },
+      { "label": "Behind the curtain", "value": 3 },
+      { "label": "In an elevator shaft", "value": 4 }
+    ]
+  },
+ {
+    "label": "What is another name for The Puppet?",
+    "difficulty": 2,
+    "correctAnswer":1,
+    "answers": [
+      { "label": "The Marionette", "value": 1 },
+      { "label": "The Puppeteer", "value": 2 },
+      { "label": "The Life Giver", "value": 3 },
+      { "label": "Moo Moo", "value": 4 }
+    ]
+  },
+  {
+     "label": "Who sings 'FNAF World: The Musical'?",
+     "difficulty": 2,
+     "correctAnswer": 3,
+     "answers": [
+       { "label": "DA GAMES", "value": 1 },
+       { "label": "Skylander Dad", "value": 2 },
+       { "label": "Lhugueny", "value": 3 },
+       { "label": "Dan TDM", "value": 4 }
+     ]
+   },
+ {
+    "label": "Who sings ‘Left Behind’?",
+    "difficulty": 2,
+    "correctAnswer": 1,
+    "answers": [
+      { "label": "DA GAMES", "value": 1 },
+      { "label": "Skylander Dad", "value": 2 },
+      { "label": "Lhugueny", "value": 3 },
+      { "label": "Dan TDM", "value": 4 }
+    ]
+  },
+ {
+    "label": "Who sings ‘The Phantom Bunch’’?",
+    "difficulty": 3,
+    "correctAnswer": 2,
+    "answers": [
+      { "label": "DA GAMES", "value": 1 },
+      { "label": "Skylander Dad", "value": 2 },
+      { "label": "Lhugueny", "value": 3 },
+      { "label": "Dan TDM", "value": 4 }
+    ]
+  },
+  {
+     "label": "Who is a pirate’?",
+     "difficulty": 1,
+     "correctAnswer": 4,
+     "answers": [
+       { "label": "Freddy", "value": 1 },
+       { "label": "Bonnie", "value": 2 },
+       { "label": "Chica", "value": 3 },
+       { "label": "Foxy", "value": 4 }
+     ]
+   },
+  {
+     "label": "Who is a chicken?",
+     "difficulty": 1,
+     "correctAnswer": 3,
+     "answers": [
+       { "label": "Freddy", "value": 1 },
+       { "label": "Bonnie", "value": 2 },
+       { "label": "Chica", "value": 3 },
+       { "label": "Foxy", "value": 4 }
+     ]
+   },
+  {
+     "label": "Who is a bear’?",
+     "difficulty": 1,
+     "correctAnswer": 1,
+     "answers": [
+       { "label": "Freddy", "value": 1 },
+       { "label": "Bonnie", "value": 2 },
+       { "label": "Chica", "value": 3 },
+       { "label": "Foxy", "value": 4 }
+     ]
+   },
+  {
+     "label": "Who is a bunny’?",
+     "difficulty": 1,
+     "correctAnswer": 2,
+     "answers": [
+       { "label": "Freddy", "value": 1 },
+       { "label": "Bonnie", "value": 2 },
+       { "label": "Chica", "value": 3 },
+       { "label": "Foxy", "value": 4 }
+     ]
+   },
+  {
+     "label": "Who sings ‘The Phantom Bunch’’?",
+     "difficulty": 1,
+     "correctAnswer": 2,
+     "answers": [
+       { "label": "Freddy", "value": 1 },
+       { "label": "Bonnie", "value": 2 },
+       { "label": "Chica", "value": 3 },
+       { "label": "Foxy", "value": 4 }
+     ]
+   },
+  {
+     "label": "Who sings ‘The Phantom Bunch’’?",
+     "difficulty": 1,
+     "correctAnswer": 2,
+     "answers": [
+       { "label": "Freddy", "value": 1 },
+       { "label": "Bonnie", "value": 2 },
+       { "label": "Chica", "value": 3 },
+       { "label": "Foxy", "value": 4 }
+     ]
+   },
+   {
+      "label": "Who is a fox’?",
+      "difficulty": 1,
+      "correctAnswer": 4,
+      "answers": [
+        { "label": "Freddy", "value": 1 },
+        { "label": "Bonnie", "value": 2 },
+        { "label": "Chica", "value": 3 },
+        { "label": "Foxy", "value": 4 }
+      ]
+    },
+    {
+          "label": "How many Nightmare Animatronics are there?",
+          "difficulty": 3,
+          "correctAnswer": 3,
+          "answers": [
+            { "label": "6", "value": 1 },
+            { "label": "10", "value": 2 },
+            { "label": "12", "value": 3 },
+            { "label": "14", "value": 4 }
+          ]
+        },
+        {
+      "label": "What type of animal is Nightmare?",
+      "difficulty": 2,
+      "correctAnswer": 1,
+      "answers": [
+        { "label": "Bear", "value": 1 },
+        { "label": "Bunny", "value": 2 },
+        { "label": "Chicken", "value": 3 },
+        { "label": "Fox", "value": 4 }
+      ]
+    },
+{
+      "label": "What type of animal is Plushtrap?",
+      "difficulty": 2,
+      "correctAnswer": 2,
+      "answers": [
+        { "label": "Bear", "value": 1 },
+        { "label": "Bunny", "value": 2 },
+        { "label": "Chicken", "value": 3 },
+        { "label": "Fox", "value": 4 }
+      ]
+    },
+{
+      "label": "What type of animal is Mangle?",
+      "difficulty": 2,
+      "correctAnswer": 4,
+      "answers": [
+        { "label": "Bear", "value": 1 },
+        { "label": "Bunny", "value": 2 },
+        { "label": "Chicken", "value": 3 },
+        { "label": "Fox", "value": 4 }
+      ]
+    },
+{
+      "label": "What best describes Chipper?",
+      "difficulty": 2,
+      "correctAnswer": 2,
+      "answers": [
+        { "label": "Bear", "value": 1 },
+        { "label": "Chipmunk", "value": 2 },
+        { "label": "Endoskeleton", "value": 3 },
+        { "label": "Human", "value": 4 }
+      ]
+    },
+{
+      "label": "What best describes Yenndo?",
+      "difficulty": 3,
+      "correctAnswer": 3,
+      "answers": [
+        { "label": "Animal", "value": 1 },
+        { "label": "Phantom", "value": 2 },
+        { "label": "Endoskeleton", "value": 3 },
+        { "label": "Human", "value": 4 }
+      ]
+    },
+{
+      "label": "What best describes Phone Guy?",
+      "difficulty": 1,
+      "correctAnswer": 4,
+      "answers": [
+        { "label": "Animal", "value": 1 },
+        { "label": "Phantom", "value": 2 },
+        { "label": "Endoskeleton", "value": 3 },
+        { "label": "Human", "value": 4 }
+      ]
+    },
+{
+      "label": "What best describes Ennard?",
+      "difficulty": 2,
+      "correctAnswer": 3,
+      "answers": [
+        { "label": "Animal", "value": 1 },
+        { "label": "Phantom", "value": 2 },
+        { "label": "Endoskeleton", "value": 3 },
+        { "label": "Human", "value": 4 }
+      ]
+    },
+{
+      "label": "What best describes Circus Baby?",
+      "difficulty": 2,
+      "correctAnswer": 4,
+      "answers": [
+        { "label": "Bear", "value": 1 },
+        { "label": "Chipmunk", "value": 2 },
+        { "label": "Endoskeleton", "value": 3 },
+        { "label": "Human", "value": 4 }
+      ]
+    },
+{
+      "label": "What best describes The Purple Guy?",
+      "difficulty": 1,
+      "correctAnswer": 4,
+      "answers": [
+        { "label": "Bear", "value": 1 },
+        { "label": "Chipmunk", "value": 2 },
+        { "label": "Endoskeleton", "value": 3 },
+        { "label": "Human", "value": 4 }
+      ]
+    },
+    {
+          "label": "Which game does Minireena appear in?",
+          "difficulty": 3,
+          "correctAnswer": 4,
+          "answers": [
+            { "label":"FNAF 2", "value": 1 },
+            { "label":"FNAF 3", "value": 2 },
+            { "label":"FNAF 4", "value": 3 },
+            { "label":"Sister Location", "value": 4 }
+          ]
+        },
+    {
+          "label":"Which game does Yenndo sometimes appear in?",
+          "difficulty":3,
+          "correctAnswer":2,
+          "answers": [
+            { "label": "FNAF 2", "value":1 },
+            { "label": "FNAF 3", "value":2 },
+            { "label": "FNAF 4", "value":3 },
+            { "label": "Sister Location", "value":4 }
+          ]
+        },
+    {
+          "label": "In which game do the Phantom Animatronics first appear?",
+          "difficulty": 2,
+          "correctAnswer": 2,
+          "answers": [
+            { "label": "FNAF 2", "value":1 },
+            { "label": "FNAF 3", "value":2 },
+            { "label": "FNAF 4", "value":3 },
+            { "label": "Sister Location", "value":4 }
+          ]
+        },
+        {
+              "label": "Which game do Nightmare Animatronics appear in?",
+              "difficulty":2,
+              "correctAnswer":3,
+              "answers": [
+                { "label": "FNAF 2", "value":1 },
+                { "label": "FNAF 3", "value":2 },
+                { "label": "FNAF 4", "value":3 },
+                { "label": "Sister Location", "value": 4 }
+              ]
+            }
+          ]
