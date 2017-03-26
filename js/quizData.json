@@ -220,7 +220,7 @@
      ]
    },
   {
-     "label": "Who sings sings?",
+     "label": "Who uses a microphone?",
      "difficulty": 1,
      "correctAnswer": 1,
      "answers": [
@@ -405,5 +405,16 @@
                 { "label": "FNAF 4", "value":3 },
                 { "label": "Sister Location", "value": 4 }
               ]
-            }
+            },
+            {
+                  "label": "Which best describes Mangle?",
+                  "difficulty":1,
+                  "correctAnswer":3,
+                  "answers": [
+                    { "label": "Human", "value":1 },
+                    { "label": "Phantom", "value":2 },
+                    { "label": "Animatronic", "value":3 },
+                    { "label": "Cupcake", "value": 4 }
+                  ]
+                }
           ]
