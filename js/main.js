@@ -18,7 +18,7 @@ $scope.submit = function(answerData) {
 
   for (var i = 0; i < answerData.length; i++) {
     if (answerData[i].selectedAnswer == answerData[i].correctAnswer) {
-      total += QPOINTS;
+      total += (QPOINTS * answerData[i].difficulty);
     }
   }
   alert('You scored ' + total + ' points!');

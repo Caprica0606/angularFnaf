@@ -19,3 +19,4 @@ docker start <container_id>
 docker run -dit --name angularFNaF -p 80:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
 ```
 * Navigate to http://192.168.99.100 in your browser
+g
