@@ -12,7 +12,7 @@
       <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
         <span class="visually-hidden">Menu</span>
       </button>
-      <h1 class="md-toolbar-tools" layout-align-gt-sm="center">FNAF QUIZ 2015</h1>
+      <h1 class="md-toolbar-tools" layout-align-gt-sm="center">FNAF QUIZ 2015: Level {{currentLevel}}</h1>
     </md-toolbar>
     <div layout="row" flex>
         <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
@@ -21,6 +21,7 @@
         <div layout="column" flex id="content">
             <md-content layout="column" flex class="md-padding">
               <div>
+                <h2>Grand Total Points: {{grandTotal}}</h2>
                 <!-- Question Form-->
                 <form>
                   <!-- Question-->

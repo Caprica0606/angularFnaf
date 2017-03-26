@@ -220,9 +220,9 @@
      ]
    },
   {
-     "label": "Who sings ‘The Phantom Bunch’’?",
+     "label": "Who sings sings?",
      "difficulty": 1,
-     "correctAnswer": 2,
+     "correctAnswer": 1,
      "answers": [
        { "label": "Freddy", "value": 1 },
        { "label": "Bonnie", "value": 2 },
@@ -231,9 +231,9 @@
      ]
    },
   {
-     "label": "Who sings ‘The Phantom Bunch’’?",
+     "label": "Who wears a bib?",
      "difficulty": 1,
-     "correctAnswer": 2,
+     "correctAnswer": 3,
      "answers": [
        { "label": "Freddy", "value": 1 },
        { "label": "Bonnie", "value": 2 },
