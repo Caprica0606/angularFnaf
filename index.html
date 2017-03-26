@@ -24,7 +24,7 @@
                 <!-- Question Form-->
                 <form>
                   <!-- Question-->
-                  <div ng-repeat="question in questions| limitTo : 3">
+                  <div ng-repeat="question in currentQuestions">
           <!-- ng-init divs:  storing and passing data-->
                     <div ng-init="quizData[$index].correctAnswer=question.correctAnswer"></div>
                     <div ng-init="quizData[$index].difficulty=question.difficulty"></div>
