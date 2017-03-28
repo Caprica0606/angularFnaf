@@ -7,7 +7,7 @@
       { "label": "Circus Baby's best friend", "value": 1 },
       { "label": "He houses the Purple Guy's soul", "value": 2 },
       { "label": "He traps the Night Guard in FNAF 2", "value": 3 },
-      { "label": "A critical component to Ennard's escape plan", "value": 4 }
+      { "label": "A critical component to Bonnie's escape plan", "value": 4 }
     ]
   },
   {
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "label": "Who throws a cupcakes in FNAF World?",
+    "label": "Who throws cupcakes in FNAF World?",
     "difficulty": 1,
     "correctAnswer": 1,
     "answers": [
@@ -81,10 +81,10 @@
      "difficulty": 3,
      "correctAnswer":1 ,
      "answers": [
-       { "label": "Freddy", "value": 1 },
-       { "label": "Bonnie", "value": 2 },
-       { "label": "Chica", "value": 3 },
-       { "label": "Freddy", "value": 4 }
+       { "label": "Golden Freddy", "value": 1 },
+       { "label": "Toy Bonnie", "value": 2 },
+       { "label": "Toy Chica", "value": 3 },
+       { "label": "Nightmare Freddy", "value": 4 }
      ]
    },
   {
@@ -165,7 +165,7 @@
     ]
   },
  {
-    "label": "Who sings ‘The Phantom Bunch’’?",
+    "label": "Who sings ‘The Phantom Bunch’?",
     "difficulty": 3,
     "correctAnswer": 2,
     "answers": [
@@ -242,7 +242,7 @@
      ]
    },
    {
-      "label": "Who is a fox’?",
+      "label": "Who is a fox?",
       "difficulty": 1,
       "correctAnswer": 4,
       "answers": [
@@ -348,7 +348,7 @@
         { "label": "Bear", "value": 1 },
         { "label": "Chipmunk", "value": 2 },
         { "label": "Endoskeleton", "value": 3 },
-        { "label": "Human", "value": 4 }
+        { "label": "Animatronic", "value": 4 }
       ]
     },
 {
@@ -416,5 +416,27 @@
                     { "label": "Animatronic", "value":3 },
                     { "label": "Cupcake", "value": 4 }
                   ]
-                }
+                },
+              {
+                    "label": "Who attacks you if you do not wind the music box?",
+                    "difficulty":2,
+                    "correctAnswer":4,
+                    "answers": [
+                      { "label": "Freddy", "value":1 },
+                      { "label": "Foxy", "value":2 },
+                      { "label": "Ennard", "value":3 },
+                      { "label": "Marionette", "value": 4 }
+                    ]
+                  },
+              {
+                    "label": "Which character does the Freddy mask help against?",
+                    "difficulty":2,
+                    "correctAnswer":1,
+                    "answers": [
+                      { "label": "Freddy", "value":1 },
+                      { "label": "Foxy", "value":2 },
+                      { "label": "Springtrap", "value":3 },
+                      { "label": "Marionette", "value": 4 }
+                    ]
+                  }
           ]

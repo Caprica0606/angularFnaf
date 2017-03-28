@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-
+<!-- ng-app is called "StarterApp"-->
 <html lang="en" ng-app="StarterApp">
+<!-- Heading -->
   <head>
+    <!--- Links to include-->
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <meta name="viewport" content="initial-scale=1" />
+    <!-- Title-->
     <title>FNAF Quiz 2015</title>
   </head>
+  <!-- Body (ng-controller is "AppCtrl")-->
   <body layout="column" ng-controller="AppCtrl">
+    <!-- toolbar-->
     <md-toolbar layout="row">
-      <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
-        <span class="visually-hidden">Menu</span>
-      </button>
+    <!--<button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
+        <span>Menu</span>
+      </button>-->
       <h1 class="md-toolbar-tools" layout-align-gt-sm="center">FNAF QUIZ 2015: Level {{currentLevel}}</h1>
     </md-toolbar>
     <div layout="row" flex>
@@ -21,6 +26,8 @@
         <div layout="column" flex id="content">
             <md-content layout="column" flex class="md-padding">
               <div>
+                <!-- Insert Timer-->
+              <h1><div id = "countdown" align = "center">{{time}}</div></h1>
                 <h2>Grand Total Points: {{grandTotal}}</h2>
                 <!-- Question Form-->
                 <form>
@@ -53,5 +60,29 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
     <script src="js/main.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
+    <script>
+    // Countdown Timer
+    /*var timeInSecs;
+    var ticker;
+    var START_TIME = 60;
+    alert(start);
+
+    function startTimer(secs){
+    timeInSecs = parseInt(secs)-1;
+    ticker = setInterval("tick()",1000);
+    }
+
+    function tick() {
+    var secs = timeInSecs;
+    if (secs==0) {
+      window.location.href='gameOver.html';
+    }
+    else {
+    timeInSecs--;
+    }
+    document.getElementById("countdown").innerHTML = secs;
+    }
+    startTimer(START_TIME);*/
+    </script>
   </body>
 </html>

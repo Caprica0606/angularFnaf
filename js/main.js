@@ -1,14 +1,38 @@
+// App:  Starter App
 var app = angular.module('StarterApp', ['ngMaterial']);
-
+// controller: AppCtrl
 app.controller('AppCtrl', ['$scope', '$http', '$mdSidenav', function($scope, $http, $mdSidenav){
   $scope.toggleSidenav = function(menuId) {
+
     $mdSidenav(menuId).toggle();
   };
+  //alert(start);
+  //**** Countdown Timer ****//
+      var TIME_START = 60;
+      $scope.time = TIME_START;
+      var timer = setInterval(function(){
+          $scope.tick($scope.time);
+          $scope.$apply();
+          console.log($scope.time);
+      }, 1000);
+
+      $scope.tick = function(seconds) {
+      if (seconds == 0) {
+        window.location.href='gameOver.html';
+      }
+      else {
+      $scope.time--;
+      }
+      };
 
 // Get data from local file
 $http.get('js/quizData.json').success(function(data) {
 
   // Initialize code
+  //Timer
+  // Countdown Timer Variables
+  //var  $scope.timeInSecs;
+  //var $scope.ticker;
   $scope.currentLevel = 1;
   $scope.grandTotal = 0;
 
@@ -17,12 +41,11 @@ $http.get('js/quizData.json').success(function(data) {
   $scope.usedQuestionsD1 = [];
   $scope.usedQuestionsD2 = [];
   $scope.usedQuestionsD3 = [];
-
   // Store qustions into arrays specific to each difficulty
   $scope.questionsD1 = [];
   $scope.questionsD2 = [];
   $scope.questionsD3 = [];
-
+  // Switch statements for difficulty arrays
   for (var i = 0; i < data.length; i++) {
     var q = data[i];
     switch (q.difficulty)
@@ -41,63 +64,11 @@ $http.get('js/quizData.json').success(function(data) {
         break;
     }
   }
-
   // Calling questions for the level
   $scope.currentQuestions = $scope.getQuestionsForLevel($scope.currentLevel);
 });
 
-//Level Question function
-$scope.getQuestionsForLevel = function(level) {
-
-  var QUESTIONS_PER_LEVEL = 3;
-
-  var probability = $scope.calculateProbability(level);
-
-  var countD1 = $scope.questionsD1.length;
-  var countD2 = $scope.questionsD2.length;
-  var countD3 = $scope.questionsD3.length;
-
-  var questions;
-  var usedQuestions;
-
-  var toReturn = [];
-
-  // randomize questions
-  for (var i = 0; i < QUESTIONS_PER_LEVEL; i++) {
-
-    var rand = Math.random();
-
-    if (rand < probability.d3) {
-      questions = $scope.questionsD3;
-      usedQuestions = $scope.usedQuestionsD3;
-    }
-    else if (rand < probability.d2 + probability.d3) {
-      questions = $scope.questionsD2;
-      usedQuestions = $scope.usedQuestionsD2;
-    }
-    else {
-      questions = $scope.questionsD1;
-      usedQuestions = $scope.usedQuestionsD1;
-    }
-
-    // Check if we've used all the questions in current difficulty
-    if (questions.length - usedQuestions.length == 0) {
-      // If there are not enough questions, then empty used questions array
-      usedQuestions = [];
-    }
-
-    var index = Math.floor(Math.random() * questions.length);
-    while (usedQuestions.indexOf(index) != -1) {
-      index = Math.floor(Math.random() * questions.length);
-    }
-    usedQuestions.push(index);
-
-    toReturn.push(questions[index]);
-  }
-
-  return toReturn;
-}
-
+// Function to calculate probability of each difficulty level
 $scope.calculateProbability = function(level) {
 
   var D1_INITIAL_VALUE = 0.85;
@@ -116,27 +87,110 @@ $scope.calculateProbability = function(level) {
 
   return probability;
 };
+/*********************LEVEL QUESTIONS FUNCTION*********************
+                     (function of the level)*/
+$scope.getQuestionsForLevel = function(level) {
+  // Initalize QUESTIONS_PER_LEVEL: 3
+  var QUESTIONS_PER_LEVEL = 3;
+  /* Probility is calculated by calling the calculateProbability function
+     and passing in the level number*/
+  var probability = $scope.calculateProbability(level);
+  // Variables to count the questions in each difficulty
+  var countD1 = $scope.questionsD1.length;
+  var countD2 = $scope.questionsD2.length;
+  var countD3 = $scope.questionsD3.length;
+  // Declare questions and usedQuestions
+  var questions;
+  var usedQuestions;
+  // toReturn is an array (initialize empty)
+  var toReturn = [];
+  // randomize questions (in a loop that runs for each question in the level)
+  for (var i = 0; i < QUESTIONS_PER_LEVEL; i++) {
+    // rand equals a random number between 0 and 1
+    var rand = Math.random();
+    // If rand < the probiltiy of d3, question will come from d3 array
+    if (rand < probability.d3) {
+      questions = $scope.questionsD3;
+      // and the usedQuestion will go into the usedQuestionsD3 array
+      usedQuestions = $scope.usedQuestionsD3;
+    }
+    /* If rand < (the combined probabilities of d2 and d3),
+       the question will come from quesstionsD2 array */
+    else if (rand < probability.d2 + probability.d3) {
+      questions = $scope.questionsD2;
+      // and the usedQuestion will go into the usedQuestionsD2 array
+      usedQuestions = $scope.usedQuestionsD2;
+    }
+    // Otherwise use a question from questionsD1 array
+    else {
+      questions = $scope.questionsD1;
+      // and the usedQuestion will go into the usedQuestionsD1 array
+      usedQuestions = $scope.usedQuestionsD1;
+    }
 
+    // Check if we've used all the questions in current difficulty
+    if (questions.length - usedQuestions.length == 0) {
+      // If there are no more new questions, then empty used questions array
+      usedQuestions = [];
+    }
+              /*****Randomize Questions*****
+      (Math.floor rounds to the nearest whole number)
+      (random number between 0 and 1)* the number of questions,
+      then rounded to the nearest whole number to get a random question index */
+    var index = Math.floor(Math.random() * questions.length);
+    // While the question is not in usedQuestion array
+    while (usedQuestions.indexOf(index) != -1) {
+      index = Math.floor(Math.random() * questions.length);
+    }
+    // Add the used question to usedQuestion array
+    usedQuestions.push(index);
+   // Add the randomly selected question to toReturn
+    toReturn.push(questions[index]);
+  }
+  // Return the questions
+  return toReturn;
+}
+
+
+/***********STUFF THAT HAPPENS WHEN THE USER CLICKS THE SUBMIT BUTTON***********
+                          (function of answerData)*/
 $scope.submit = function(answerData) {
-  // Tally the score
+  // CALCULATE LEVEL SCORE
+      /* QPOINTS initialized at 5 and
+         levelTotal initialized at 0 */
   var QPOINTS = 5;
-  var total = 0;
+  var levelTotal = 0;
+  //var levelTime = null;
+  //var LEVEL_ONE_TIME = 60;
+  //var level = $scope.currentLevel;
 
+ // For the length of answerData array
   for (var i = 0; i < answerData.length; i++) {
+    // If the selected answer is correct
     if (answerData[i].selectedAnswer == answerData[i].correctAnswer) {
-      total += (QPOINTS * answerData[i].difficulty);
+      // Add (QPOINTS * difficulty) to levelTotal
+      levelTotal += (QPOINTS * answerData[i].difficulty);
     }
   }
 
-  alert('You scored ' + total + ' points!');
-
+  // Show alert Box displaying level's score
+  alert('You scored ' + levelTotal + ' points!');
+  // currentLevel will go up by 1
   $scope.currentLevel += 1;
-  $scope.grandTotal += total;
+  // Tally grandTotal (accumulation of levelTotals)
+  $scope.grandTotal += levelTotal;
 
+  // Reset Timer
+  //levelTime = LEVEL_ONE_TIME- (LEVEL_ONE_TIME*((level/(level + 50)));
+  //alert(levelTime);
+  //startTimer(levelTime);
+
+  // quizData is an array
   $scope.quizData = [];
+  // newQuestions come from the getQuestionsForLevel function
   var newQuestions = $scope.getQuestionsForLevel($scope.currentLevel);
+  // $scope.currentQuestions equals newQuestions
   $scope.currentQuestions = newQuestions;
-
 };
 
 }]);
