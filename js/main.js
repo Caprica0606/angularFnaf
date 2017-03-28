@@ -8,8 +8,10 @@ app.controller('AppCtrl', ['$scope', '$http', '$mdSidenav', function($scope, $ht
   };
   //alert(start);
   //**** Countdown Timer ****//
-      var TIME_START = 60;
-      $scope.time = TIME_START;
+  var TIME_CONST = 60;
+  $scope.timerFuction = function(seconds){
+
+      $scope.time = seconds;
       var timer = setInterval(function(){
           $scope.tick($scope.time);
           $scope.$apply();
@@ -24,7 +26,8 @@ app.controller('AppCtrl', ['$scope', '$http', '$mdSidenav', function($scope, $ht
       $scope.time--;
       }
       };
-
+};
+$scope.timerFuction(TIME_CONST);
 // Get data from local file
 $http.get('js/quizData.json').success(function(data) {
 
@@ -160,10 +163,7 @@ $scope.submit = function(answerData) {
          levelTotal initialized at 0 */
   var QPOINTS = 5;
   var levelTotal = 0;
-  //var levelTime = null;
-  //var LEVEL_ONE_TIME = 60;
-  //var level = $scope.currentLevel;
-
+  
  // For the length of answerData array
   for (var i = 0; i < answerData.length; i++) {
     // If the selected answer is correct
