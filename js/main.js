@@ -6,26 +6,27 @@ app.controller('AppCtrl', ['$scope', '$http', '$mdSidenav', function($scope, $ht
 
     $mdSidenav(menuId).toggle();
   };
-  //alert(start);
   //**** Countdown Timer ****//
-  var TIME_CONST = 60;
-  $scope.timerFuction = function(seconds){
+var TIME_CONST = 60;
+$scope.timerFuction = function(seconds){
 
-      $scope.time = seconds;
-      var timer = setInterval(function(){
-          $scope.tick($scope.time);
-          $scope.$apply();
-          console.log($scope.time);
-      }, 1000);
+    $scope.time = seconds;
 
-      $scope.tick = function(seconds) {
-      if (seconds == 0) {
-        window.location.href='gameOver.html';
-      }
-      else {
-      $scope.time--;
-      }
-      };
+     $scope.timer = setInterval(function(){
+        $scope.tick($scope.time);
+        $scope.$apply();
+        console.log($scope.time);
+    }, 1000);
+
+    $scope.tick = function(seconds) {
+    if (seconds == 0) {
+      window.location.href='gameOver.html';
+    }
+    else {
+    $scope.time--;
+    }
+    };
+
 };
 $scope.timerFuction(TIME_CONST);
 // Get data from local file
@@ -159,11 +160,9 @@ $scope.getQuestionsForLevel = function(level) {
                           (function of answerData)*/
 $scope.submit = function(answerData) {
   // CALCULATE LEVEL SCORE
-      /* QPOINTS initialized at 5 and
-         levelTotal initialized at 0 */
   var QPOINTS = 5;
   var levelTotal = 0;
-  
+
  // For the length of answerData array
   for (var i = 0; i < answerData.length; i++) {
     // If the selected answer is correct
@@ -180,10 +179,12 @@ $scope.submit = function(answerData) {
   // Tally grandTotal (accumulation of levelTotals)
   $scope.grandTotal += levelTotal;
 
-  // Reset Timer
-  //levelTime = LEVEL_ONE_TIME- (LEVEL_ONE_TIME*((level/(level + 50)));
-  //alert(levelTime);
-  //startTimer(levelTime);
+  /*****Reset the timer with the appropriate level time*****/
+  //var CYLON_TIME = 50;
+  //var levelTime = Math.floor(CYLON_TIME - ((CYLON_TIME * $scope.currentLevel)/($scope.currentLevel+CYLON_TIME)));
+  clearInterval($scope.timer);
+  $scope.timerFuction(TIME_CONST);
+
 
   // quizData is an array
   $scope.quizData = [];
