@@ -6,8 +6,10 @@ app.controller('AppCtrl', ['$scope', '$http', '$mdSidenav', function($scope, $ht
 
     $mdSidenav(menuId).toggle();
   };
-  //**** Countdown Timer ****//
-var TIME_CONST = 60;
+  /************ Countdown Timer ************/
+var START_TIME = 60;
+
+// Countdown Timer Function
 $scope.timerFuction = function(seconds){
 
     $scope.time = seconds;
@@ -28,7 +30,17 @@ $scope.timerFuction = function(seconds){
     };
 
 };
-$scope.timerFuction(TIME_CONST);
+
+// Reset Timer Function
+$scope.resetTimer = function(){
+var timeSquared = Math.pow(START_TIME,2);
+var doubleTime = $scope.currentLevel * 2;
+var levelTime = Math.floor((timeSquared) / (doubleTime + START_TIME));
+clearInterval($scope.timer);
+$scope.timerFuction(levelTime);
+};
+// Call Countdown Timer Function
+$scope.timerFuction(START_TIME);
 // Get data from local file
 $http.get('js/quizData.json').success(function(data) {
 
@@ -178,14 +190,8 @@ $scope.submit = function(answerData) {
   $scope.currentLevel += 1;
   // Tally grandTotal (accumulation of levelTotals)
   $scope.grandTotal += levelTotal;
-
-  /*****Reset the timer with the appropriate level time*****/
-  //var CYLON_TIME = 50;
-  //var levelTime = Math.floor(CYLON_TIME - ((CYLON_TIME * $scope.currentLevel)/($scope.currentLevel+CYLON_TIME)));
-  clearInterval($scope.timer);
-  $scope.timerFuction(TIME_CONST);
-
-
+  // Reset the Timer
+  $scope.resetTimer();
   // quizData is an array
   $scope.quizData = [];
   // newQuestions come from the getQuestionsForLevel function
