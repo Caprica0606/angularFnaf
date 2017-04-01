@@ -2,7 +2,7 @@
 var app = angular.module('StarterApp', ['ngMaterial']);
 
 // controller: AppCtrl
-app.controller('AppCtrl', ['$scope', '$mdThemingProvider', '$interval', '$http', '$mdSidenav', function($scope, $mdThemingProvider, $interval, $http, $mdSidenav){
+app.controller('AppCtrl', ['$scope', '$interval', '$http', '$mdSidenav', function($scope, $interval, $http, $mdSidenav){
   $scope.toggleSidenav = function(menuId) {
 
     $mdSidenav(menuId).toggle();
