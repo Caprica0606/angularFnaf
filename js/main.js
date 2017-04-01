@@ -1,11 +1,40 @@
 // App:  Starter App
 var app = angular.module('StarterApp', ['ngMaterial']);
+
 // controller: AppCtrl
-app.controller('AppCtrl', ['$scope', '$http', '$mdSidenav', function($scope, $http, $mdSidenav){
+app.controller('AppCtrl', ['$scope', '$mdThemingProvider', '$interval', '$http', '$mdSidenav', function($scope, $mdThemingProvider, $interval, $http, $mdSidenav){
   $scope.toggleSidenav = function(menuId) {
 
     $mdSidenav(menuId).toggle();
   };
+
+/***Hide and Show forms***/
+  $scope.caprica = 6;
+  // Boolean 6 means true
+  $scope.showForm = function(value) {
+    if (value == 6)
+      return true;
+    else
+      return false;
+  };
+  /************ Log in screen function ************/
+  $scope.login = function(username){
+    $scope.caprica = 0;
+    // Call Countdown Timer Function
+    $scope.timerFuction(START_TIME);
+    //pass name to php
+    $scope.name = username;
+    /*$http({
+        url: "fnafQuiz.php",
+        method: "POST",
+        data: {
+            data: name
+        }
+    }).success(function(response) {
+    console.log(response);
+  });*/
+  };
+
   /************ Countdown Timer ************/
 var START_TIME = 60;
 
@@ -39,16 +68,10 @@ var levelTime = Math.floor((timeSquared) / (doubleTime + START_TIME));
 clearInterval($scope.timer);
 $scope.timerFuction(levelTime);
 };
-// Call Countdown Timer Function
-$scope.timerFuction(START_TIME);
+
 // Get data from local file
 $http.get('js/quizData.json').success(function(data) {
 
-  // Initialize code
-  //Timer
-  // Countdown Timer Variables
-  //var  $scope.timeInSecs;
-  //var $scope.ticker;
   $scope.currentLevel = 1;
   $scope.grandTotal = 0;
 
@@ -185,11 +208,16 @@ $scope.submit = function(answerData) {
   }
 
   // Show alert Box displaying level's score
-  alert('You scored ' + levelTotal + ' points!');
+  alert('You scored ' + levelTotal + ' points this level!');
   // currentLevel will go up by 1
   $scope.currentLevel += 1;
   // Tally grandTotal (accumulation of levelTotals)
   $scope.grandTotal += levelTotal;
+  // Determine if the player won or lost
+  if (levelTotal < 15){
+
+    window.location.href='gameOver.html';
+}
   // Reset the Timer
   $scope.resetTimer();
   // quizData is an array

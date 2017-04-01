@@ -44,14 +44,3 @@
   outline-style: double;
   outline-color: purple;
   }
-
-  /* Murder Font*/
-  @font-face {
-    font-family: "Murder";
-    src: url(youmurdererbb_reg.ttf) format("truetype");
-
-  /*Title Style*/
-  h1 { font-family: "Murder", sans-serif;
-       color: red;
-       font-size: 400%;
-  }
